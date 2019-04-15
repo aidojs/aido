@@ -1,0 +1,14 @@
+body
+  section
+    p: b Awesome slack powered poll of #{user.slackProfile.realName}
+  section
+    b #{state.poll.question}
+  section
+    each option in state.poll.options
+      button(name="dummy" value="") #{option.text}
+  section
+    button(name="view" value="editPoll") Edit
+    button(name="savePoll" class="primary") Publish
+  if hint
+    section
+      i Please publish your poll before you can vote on it

@@ -1,0 +1,17 @@
+body
+  section
+    p
+      a(href=user.slackId) #{user.slackProfile.realName}
+      span  would like to ask you a question :
+  section
+    blockquote #{state.poll.question}
+  section
+    each option in state.poll.options
+      button(
+        name="vote"
+        value={ pollId: option.pollId, optionId: option.id }
+      ) #{option.text} (#{(option.votes && option.votes.length) || 0})
+  if (hasVotes)
+    section(
+      image-url=chartUrl
+    )

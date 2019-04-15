@@ -1,0 +1,14 @@
+body
+  section
+    p: b Awesome slack powered todo-list of #{user.slackProfile.realName}
+  each item, idx in state.items
+    section(color=getColor(item.done))
+      button(
+        name="markDone"
+        value={ idx, done: !item.done }
+        class=getClass(item.done)
+      ) #{getLabel(item.done, item.label)}
+  section(color="danger")
+    button(name="view" value="addItem") ✍️ Add item
+    button(name="view" value="removeItem") ❌ Remove item
+  

@@ -1,0 +1,13 @@
+body(class="modal")
+  section
+    form(action="removeItem")
+      header Remove an item
+      label Select
+        select(
+          name="idx"
+          placeholder="Chose one..."
+          required
+        )
+          each item, idx in sortedItems
+            option(value=idx) #{item.label}
+      input(type="submit" value="DELETE")

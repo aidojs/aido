@@ -1,0 +1,43 @@
+body(class="modal")
+  section
+    form(action="createPoll")
+      header Create a poll
+      label Question
+        input(
+          type="text"
+          name="question"
+          value=state.poll.question
+          placeholder="Which team is the best team..."
+          required
+        )
+      label Option 1
+        input(
+          type="text"
+          name="option1"
+          value=state.poll.options && state.poll.options[0] && state.poll.options[0].text
+          placeholder="Backend..."
+          required
+        )
+      label Option 2
+        input(
+          type="text"
+          name="option2"
+          value=state.poll.options && state.poll.options[1] && state.poll.options[1].text
+          placeholder="Frontend..."
+          required
+        )
+      label Option 3
+        input(
+          type="text"
+          name="option3"
+          value=state.poll.options && state.poll.options[2] && state.poll.options[2].text
+          placeholder="Data..."
+        )
+      label Option 4
+        input(
+          type="text"
+          name="option4"
+          value=state.poll.options && state.poll.options[3] && state.poll.options[3].text
+          placeholder="Product..."
+        )
+      input(type="submit" value="Create")

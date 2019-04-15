@@ -1,0 +1,40 @@
+{
+  "name": "aido",
+  "version": "0.1.0",
+  "description": "Slack Applications Made Simple",
+  "main": "lib/index.js",
+  "scripts": {
+    "todo": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/todo",
+    "polls": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/polls",
+    "lint": "eslint --ignore-path .gitignore ./"
+  },
+  "author": "Damien BUTY <dam.buty@gmail.com> (https://www.npmjs.com/~dam-buty)",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "nodemon": "^1.18.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidojs/aido.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aidojs/aido/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "html2slack": "^1.8.0",
+    "is-json": "^2.0.1",
+    "knex": "^0.16.5",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "localtunnel": "^1.9.1",
+    "lodash": "^4.17.11",
+    "objection": "^1.6.7",
+    "pug": "^2.0.3",
+    "request-promise-native": "^1.0.7",
+    "slack": "^11.0.2",
+    "sqlite3": "^4.0.6"
+  }
+}
