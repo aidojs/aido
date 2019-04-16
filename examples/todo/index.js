@@ -10,9 +10,10 @@ aido.configure({
   persistentStorage: path.join(__dirname, 'sessions.db'),
   viewsFolder: path.join(__dirname, 'views'),
   viewsTemplateExtension: 'pug',
-  slackVerificationToken: 'PE1gvdLlApVrdEKB4YUeaP1X',
-  botToken: 'xoxp-26655536611-168801474546-455596679361-25383179482bb86765251cbc3dbfd8ce',
-  appId: 'ADFGTV25C',
+  // appId: 'AXXXLOLOLOL',
+  // slackVerificationToken: 'xxxxxxxxxxxxxxxxx',
+  // botToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
+  // legacyToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
 })
 
 // Register slash commands and views
