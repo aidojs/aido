@@ -1,32 +1,21 @@
-const path = require('path')
-
 const aido = require('../../lib')
 const Polack = require('./slash/polack')
+const pollsPlugin = require('./plugins/polls')
 
 // Configure global application
-aido.configure({
+aido.init({
   getSlackProfile: true,
-  hints: true,
-  persistentStorage: path.join(__dirname, 'sessions.db'),
-  viewsFolder: path.join(__dirname, 'views'),
-  viewsTemplateExtension: 'pug',
-  localtunnel: {
-    subDomain: 'polack-test',
+  slash: { polack: Polack },
+  plugins: [pollsPlugin],
+  tunnel: {
     // If you already have a tunnel setup just uncomment the following line and enter your actual tunnel URL
     custom: 'https://aido-test.ngrok.io',
   },
-  // appId: 'AXXXLOLOLOL',
-  // slackVerificationToken: 'xxxxxxxxxxxxxxxxx',
-  // botToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
-  // legacyToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
-  // Use the following option if you don't want aido to check that slash commands are installed on your workspace
-  // noCommandIntrospection: true,
+  appId: 'ADFGTV25C',
+  slackVerificationToken: 'l6QWLDSRgbWYO7oqG28t7yFh',
+  appToken: 'xoxp-26655536611-168801474546-743125131991-1f728d2158b04ad368151fb01bd10ff8',
+  botToken: 'xoxb-236786829587-4jE6wkRi4UuuJTVku8wxcOc1',
+  legacyToken: 'xoxp-26655536611-168801474546-741269345328-ad0ca072c1cabb847b894d0eaa9dc077',
 })
 
-// Register slash commands and views
-aido.registerSlash('polack', Polack)
-aido.registerView('editPoll', true)
-aido.registerView('viewPoll')
-aido.registerView('poll')
-
-aido.listen(3000)
+aido.start(3000)

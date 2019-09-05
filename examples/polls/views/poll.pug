@@ -1,7 +1,6 @@
 body
   section
-    p
-      a(href=user.slackId) #{user.slackProfile.realName}
+    p #{user.slackProfile.realName}
       span  would like to ask you a question :
   section
     blockquote #{state.poll.question}

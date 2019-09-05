@@ -1,10 +1,22 @@
 const aido = require('../../lib')
-const Todo = require('./slash/todo')
+const { Slash } = aido
+
+class Simple extends Slash {
+  initState() {
+    return {
+      value: 0,
+    }
+  }
+
+  increment() {
+    this.state.value += 1
+  }
+}
 
 // Configure global application
 aido.init({
-  getSlackProfile: true,
-  slash: { todo: Todo },
+  viewsFolder: __dirname,
+  slash: { simple: Simple },
   // tunnel: {
   //   // If you already have a tunnel setup just uncomment the following line and enter your actual tunnel URL
   //   custom: 'https://xxxxxx.ngrok.io',
@@ -18,4 +30,4 @@ aido.init({
   // legacyToken: 'xoxp-xxxxxxxxx-xxxxxxxx',
 })
 
-aido.start(3000)
+aido.start()

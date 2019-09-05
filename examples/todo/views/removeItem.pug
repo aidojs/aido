@@ -8,6 +8,6 @@ body(class="modal")
           placeholder="Chose one..."
           required
         )
-          each item, idx in sortedItems
+          each item, idx in state.items
             option(value=idx) #{item.label}
       input(type="submit" value="DELETE")

@@ -33,7 +33,9 @@ class Todo extends Slash {
    * Or `this.args` to get an array of strings (split by space)
    */
   handleText() {
-    this.addItem({ label: this.text })
+    if (this.text) {
+      this.addItem({ label: this.text })
+    }
   }
 
   // The following methods are custom, used by the different views of the slash command. Grow your own ! _\|/_

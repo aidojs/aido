@@ -87,7 +87,7 @@ aido.configure({
   viewsTemplateExtension: 'pug',
   appId: 'AXXXLOLOLOL',
   slackVerificationToken: 'xxxxxxxxxxxxxxxxx',
-  botToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
+  appToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
   legacyToken: 'xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx',
 })
 ```
@@ -129,7 +129,3 @@ If you are not using the default PUG templater, you might need to specify the ex
 **hints** (Boolean - default `true`)
 
 Set `hints` to false if you want to toggle off the auto-configurator.
-
-**noCommandIntrospection** (Boolean - default `false`)
-
-To auto-discover your slash commands (as part of the auto-configuration process), aido needs a **legacy token** to be setup on your Slack application. If you'd prefer not to, just set `noCommandIntrospection` to true.

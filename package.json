@@ -1,17 +1,21 @@
 {
-  "name": "aido",
-  "version": "0.1.0",
+  "name": "@comet/aido",
+  "private": true,
+  "version": "0.2.0",
   "description": "Slack Applications Made Simple",
   "main": "lib/index.js",
   "scripts": {
-    "todo": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/todo",
-    "polls": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/polls",
-    "lint": "eslint --ignore-path .gitignore ./"
+    "todo": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/todo dev",
+    "polls": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/polls dev",
+    "simple": "nodemon --inspect=0.0.0.0:9300 --signal SIGINT --ext js,json,pug examples/simple dev",
+    "lint": "eslint --ignore-path .gitignore ./",
+    "test": "jest --runInBand --coverage"
   },
   "author": "Damien BUTY <dam.buty@gmail.com> (https://www.npmjs.com/~dam-buty)",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.16.0",
+    "jest": "^24.9.0",
     "nodemon": "^1.18.11"
   },
   "repository": {
@@ -22,6 +26,7 @@
     "url": "https://github.com/aidojs/aido/issues"
   },
   "dependencies": {
+    "bluebird": "^3.5.5",
     "chalk": "^2.4.2",
     "html2slack": "^1.8.0",
     "is-json": "^2.0.1",
@@ -33,8 +38,13 @@
     "lodash": "^4.17.11",
     "objection": "^1.6.7",
     "pug": "^2.0.3",
+    "pug-lexer": "^4.1.0",
     "request-promise-native": "^1.0.7",
     "slack": "^11.0.2",
-    "sqlite3": "^4.0.6"
+    "sqlite3": "^4.0.6",
+    "winston": "^3.2.1"
+  },
+  "jest": {
+    "collectCoverageFrom": ["lib/**/*.js"]
   }
 }

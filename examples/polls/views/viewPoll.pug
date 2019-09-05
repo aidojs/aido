@@ -1,14 +1,17 @@
 body
-  section
-    p: b Awesome slack powered poll of #{user.slackProfile.realName}
-  section
-    b #{state.poll.question}
-  section
+  section(
+    title="Previewing your poll"
+    color="warning"
+  )
+    q #{state.poll.question}
     each option in state.poll.options
       button(name="dummy" value="") #{option.text}
-  section
+  section(
+    title="Actions"
+    color="warning"
+  )
     button(name="view" value="editPoll") Edit
     button(name="savePoll" class="primary") Publish
   if hint
-    section
+    section(color="danger")
       i Please publish your poll before you can vote on it

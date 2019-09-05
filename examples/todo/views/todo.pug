@@ -10,5 +10,6 @@ body
       ) #{getLabel(item.done, item.label)}
   section(color="danger")
     button(name="view" value="addItem") ✍️ Add item
-    button(name="view" value="removeItem") ❌ Remove item
+    if (state.items.length)
+      button(name="view" value="removeItem") ❌ Remove item
   
