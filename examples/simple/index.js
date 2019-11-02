@@ -11,6 +11,10 @@ class Simple extends Slash {
   increment() {
     this.state.value += 1
   }
+
+  decrement() {
+    this.state.value -= 1
+  }
 }
 
 // Configure global application
