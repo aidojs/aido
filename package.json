@@ -1,6 +1,6 @@
 {
   "name": "aido",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Slack Applications Made Simple",
   "main": "lib/index.js",
   "scripts": {
@@ -44,6 +44,8 @@
     "winston": "^3.2.1"
   },
   "jest": {
-    "collectCoverageFrom": ["lib/**/*.js"]
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ]
   }
 }
