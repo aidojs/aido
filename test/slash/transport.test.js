@@ -5,7 +5,7 @@ describe('Slash class - transport method', () => {
   beforeEach(() => {
     this.slash = new Slash()
     this.slash.view = { modal: false }
-    this.slash.bot = stubs.slack
+    this.slash._bot = stubs.slack
     this.slash.options = {}
     this.slash.user = { slackId: 'UW0TM8' }
   })

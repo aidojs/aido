@@ -1,4 +1,4 @@
-const { unpackView } = require('../../lib/detectViews')
+const { unpackView } = require('../../lib/utils/detectViews')
 
 const modalTemplates = [`
 body(class="modal")

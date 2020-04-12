@@ -2,7 +2,7 @@ const sinon = require('sinon')
 const request = require('request-promise-native')
 const { set } = require('lodash')
 
-const logger = require('../lib/logger')
+const logger = require('../lib/utils/logger')
 
 const slackEndpoints = ['dialog.open', 'mpim.open', 'im.open', 'chat.postEphemeral', 'chat.postMessage']
 const slackStubs = slackEndpoints.reduce((stubs, stub) => {
@@ -24,7 +24,7 @@ const loggerStub = {
   error: sinon.stub(logger, 'error'),
 }
 
-const assertStub = sinon.stub().callsFake((assertion, status) => {
+const assertStub = sinon.stub().callsFake((assertion) => {
   if (!assertion) {
     throw new Error()
   }
