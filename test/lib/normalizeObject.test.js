@@ -1,4 +1,4 @@
-const normalizeObject = require('../../lib/normalizeObject')
+const normalizeObject = require('../../lib/utils/normalizeObject')
 
 describe('Object normalizer', () => {
   it('should camelCase the keys of a simple object', () => {

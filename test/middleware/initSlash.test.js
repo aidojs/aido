@@ -117,7 +117,7 @@ describe('Middleware - initSlash', () => {
     await initSlash(ctx, next)
     expect(assert.threw()).toBe(false)
     expect(constructorStub.called).toBe(true)
-    expect(handleTextStub.called).toBe(true)
+    expect(handleTextStub.called).toBe(false)
     expect(initDbStub.called).toBe(true)
     expect(initStub.called).toBe(true)
     expect(next.called).toBe(true)
