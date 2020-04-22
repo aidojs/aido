@@ -1,6 +1,6 @@
 {
   "name": "aido",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Slack Applications Made Simple",
   "main": "lib/index.js",
   "scripts": {
