@@ -13,6 +13,16 @@ You can think of Aido as being a very simple Single Page App framework, where yo
 
 All in all, you just need to worry about writing your application, and Aido does all the heavy lifting of communicating to and from Slack. As an added bonus, it includes an interactive configuration tutorial to help you setup your application in your Slack workspace. The configurator will guide you through the installation of your application, the retrieval of all relevant OAuth tokens, the creation of your Slack commands and the attribution of the required OAuth scopes.
 
+## Install
+
+```bash
+npm i aido sqlite3
+
+# Or with yarn
+
+yarn add aido sqlite3
+```
+
 ## A basic example
 
 _More complete examples can be found in the /examples folder_
