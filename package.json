@@ -41,8 +41,10 @@
     "pug-lexer": "^4.1.0",
     "request-promise-native": "^1.0.7",
     "slack": "^11.0.2",
-    "sqlite3": "^4.0.6",
     "winston": "^3.2.1"
+  },
+  "peerDependencies": {
+    "sqlite3": "^4.0.6"
   },
   "jest": {
     "collectCoverageFrom": [
