@@ -16,12 +16,13 @@ All in all, you just need to worry about writing your application, and Aido does
 ## Install
 
 ```bash
-npm i aido sqlite3
+npm i aido
 
 # Or with yarn
 
-yarn add aido sqlite3
+yarn add aido
 ```
+Note : if you want to use Aido's built-in SQLite database layer, you should install the `sqlite3` package separately. Be aware that at the time of writing, `node-sqlite` is not yet compatible with Node.js V14. (You can consult [this issue](https://github.com/mapbox/node-sqlite3/issues/1314) for up-to-date information on the subject.
 
 ## A basic example
 
