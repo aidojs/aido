@@ -12,6 +12,8 @@ You can think of Aido as being a basic Single Page App framework, where your app
 
 ## A basic example
 
+_Complete documentation can be found in the [Aido wiki](https://github.com/aidojs/aido/wiki)_
+
 Let's create a very simple Slack application :
 
 - It handles 1 slash command, `/number`
@@ -90,5 +92,6 @@ aido.start()
 
 Like what you see ?
 
-⌨️ Jump right in the code by taking a look at the [examples folder](/examples)
-📚 Or read the documentation in the [Aido wiki](https://github.com/aidojs/aido/wiki)
+⌨️ Jump right in the code by taking a look at the [examples folder](/examples) 
+
+📚 Or read the documentation in the [Aido wiki](https://github.com/aidojs/aido/wiki) 
