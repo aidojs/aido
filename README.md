@@ -33,7 +33,7 @@ body
     button(name="decrement") Remove 1
 ```
 
-Then we create our server :
+Then we create our Javascript program :
 ```javascript
 // index.js
 const { Slash } = require('aido')
